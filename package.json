@@ -10,7 +10,7 @@
   "homepage": "https://jxjwilliam.github.io/awesomeproject",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -b master --repo https://github.com/jxjwilliam/jxjwilliam.github.io.git",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
