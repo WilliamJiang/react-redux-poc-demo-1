@@ -25,9 +25,10 @@ class Form extends Component {
 
     submitForm = () => {
         this.setState(this.initialState);
-        if (typeof this.props.handleSubmit === 'function') {
+        const {handleSubmit} = this.props;
+        if (typeof handleSubmit === 'function') {
             console.log(this.props);
-            this.props.handleSubmit(this.state);
+            handleSubmit(this.state);
         }
     }
 

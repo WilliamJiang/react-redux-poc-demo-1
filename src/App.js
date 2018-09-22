@@ -5,10 +5,18 @@ import './App.css';
 import Table from './Table'
 import Form from './Form'
 
+// 2 places to store data: props and state.
+// this.props.characterData = this.state.characters
+
 class App extends Component {
-    state = {
-        characters: []
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            characters: [
+                {name:'Hello world', 'job': "William Jiang"}
+            ]
+        };
+    }
 
     removeCharacter = index => {
         const {characters} = this.state;
@@ -21,7 +29,7 @@ class App extends Component {
     }
 
     handleSubmit = character => {
-        if(character) {
+        if (character) {
             this.setState({characters: [...this.state.characters, character]});
         }
     }
@@ -33,7 +41,7 @@ class App extends Component {
                     characterData={this.state.characters}
                     removeCharacter={this.removeCharacter}
                 />
-                <Form handleSubmit={this.handleSubmit} />
+                <Form handleSubmit={this.handleSubmit}/>
             </div>
         );
     }

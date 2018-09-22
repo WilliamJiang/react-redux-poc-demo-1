@@ -12,16 +12,15 @@ const TableHeader = () => {
     );
 }
 
-const TableBody = props => {
+const TableBody = ({cd, rc}) => {
 
-    console.log(props.characterData)
-    const rows = props.characterData.map((row, index) => {
+    const rows = cd.map((row, index) => {
         return (
             <tr key={index}>
                 <td>{row.name}</td>
                 <td>{row.job}</td>
                 <td>
-                    <button onClick={() => props.removeCharacter(index)}>Delete</button>
+                    <button onClick={() => rc(index)}>Delete</button>
                 </td>
             </tr>
         );
@@ -42,8 +41,8 @@ class Table extends Component {
             <table>
                 <TableHeader/>
                 <TableBody
-                    characterData={characterData}
-                    removeCharacter={removeCharacter}
+                    cd={characterData}
+                    rc={removeCharacter}
                 />
             </table>
         );
