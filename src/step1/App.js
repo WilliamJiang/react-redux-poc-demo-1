@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../App.css';
 
-import Table from './Table'
-import Form from './Form'
+import Table from './step1/Table'
+import Form from './step1/Form'
 
 // 2 places to store data: props and state.
 // this.props.characterData = this.state.characters

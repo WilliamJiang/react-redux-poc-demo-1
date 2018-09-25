@@ -18,3 +18,10 @@ Quick Start
 ```
 
 [See Here](http://localhost:3000/)
+
+
+Reference
+-----------
+
+
+[How to fetch data in React](https://www.robinwieruch.de/react-fetching-data/)
